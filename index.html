@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reality Checker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div>
+        <div class="title">Reality Checker</div>
+        <div class="subtitle">Try to keep your doubt under 100%</div>
+      </div>
+    </div>
+
+    <div class="meter">
+      <div class="meter-label">DOUBT: <span id="doubt-num">0</span>%</div>
+      <div class="meter-bar" aria-label="Doubt meter">
+        <div class="meter-fill" id="doubt-fill"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- //intro -->
+    <section class="page" id="intro">
+      <div class="card">
+        <h1>Reality Checker</h1>
+
+        <p class="lead">
+          Evil deities hate this one trick, doubt your reality! If you have found yourself
+          worried about the fundamentals of your perception, take this online quiz to see
+          just how much you doubt reality! Be aware, this test is working against you!
+           Try to keep your doubt below 100%, I doubt you can!
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="mono small">
+          RealityCheck™ is not responsible for side effects including (but not limited to)
+          existential doubt, minor mental breakdowns, retaliation from an evil demon (if applicable),
+          sudden loss of trust in your senses, and the permanent urge to say “how would I actually know?”
+        </p>
+
+        <button class="btn primary" data-go="#q1">Begin</button>
+      </div>
+    </section>
+
+    <!-- //module -->
+    <section class="page" id="q1">
+      <div class="card">
+        <h2>Module 1: Sense Evaluation</h2>
+
+        <div class="step active" id="q1-step1">
+          <p class="lead">Select the blue square.</p>
+          <div class="grid">
+            <button class="tile" data-q="q1" data-choice="warm-red" style="background:#b22222">A</button>
+            <button class="tile" data-q="q1" data-choice="warm-blue" style="background:#1f4aa8">B</button>
+          </div>
+          <p class="feedback" id="fb-q1"></p>
+        </div>
+
+        <div class="step" id="q1-step2">
+          <div class="divider"></div>
+          <p class="lead">Select the blue square.</p>
+          <div class="grid">
+            <button class="tile" data-q="q1b" data-choice="blue-A" style="background:#1f4aa8">A</button>
+            <button class="tile" data-q="q1b" data-choice="blue-B" style="background:#1a3f93">B</button>
+          </div>
+          <p class="feedback" id="fb-q1b"></p>
+        </div>
+
+        <div class="step" id="q1-step3">
+          <div class="divider"></div>
+          <p class="lead">Which is a triangle?</p>
+
+          <div class="grid">
+            <button class="shape" data-q="q1c" data-choice="tri-A" aria-label="Shape A">
+              <div class="shape-inner triangle"></div>
+            </button>
+
+            <button class="shape" data-q="q1c" data-choice="tri-B" aria-label="Shape B">
+              <div class="shape-inner trapezoid"></div>
+            </button>
+          </div>
+
+          <p class="feedback" id="fb-q1c"></p>
+        </div>
+
+        <div class="step" id="q1-step4">
+          <div class="divider"></div>
+          <p class="lead">Which material would be tougher?</p>
+          <div class="row">
+            <button class="btn choice" data-q="q1d" data-choice="sand">Coal</button>
+            <button class="btn choice" data-q="q1d" data-choice="glass">Diamond</button>
+          </div>
+          <p class="feedback" id="fb-q1d"></p>
+        </div>
+
+        <div class="step" id="q1-step5">
+          <div class="divider"></div>
+          <p class="lead">Which smells stronger?</p>
+          <div class="row">
+            <button class="btn choice" data-q="q1e" data-choice="coffee">Coffee</button>
+            <button class="btn choice" data-q="q1e" data-choice="soap">Soap</button>
+          </div>
+          <p class="feedback" id="fb-q1e"></p>
+        </div>
+
+        <div class="row">
+          <button class="btn" data-go="#q2">Continue</button>
+          <button class="btn ghost" data-go="#intro">Back</button>
+        </div>
+
+        <p class="mono small dim">Demon note: senses are just a story your conscious  tells itself to understand the world. You can't trust that.</p>
+      </div>
+    </section>
+
+    <!-- //module -->
+    <section class="page" id="q2">
+      <div class="card">
+        <h2>Module 2: Dream Check</h2>
+
+        <div class="step active" id="q2-step1">
+          <p class="lead">Right now, are you awake?</p>
+          <div class="row">
+            <button class="btn choice" data-q="q2a" data-choice="yes">Yes</button>
+            <button class="btn choice" data-q="q2a" data-choice="no">No</button>
+            <button class="btn choice" data-q="q2a" data-choice="unsure">Unsure</button>
+          </div>
+          <p class="feedback" id="fb-q2a"></p>
+        </div>
+
+        <div class="step" id="q2-step2">
+          <div class="divider"></div>
+          <p class="lead">Pick a test that would prove you're awake.</p>
+          <div class="row">
+            <button class="btn choice" data-q="q2b" data-choice="pinch">Pinch myself</button>
+            <button class="btn choice" data-q="q2b" data-choice="clock">Check a clock twice</button>
+            <button class="btn choice" data-q="q2b" data-choice="read">Read a sentence twice</button>
+            <button class="btn choice" data-q="q2b" data-choice="ask">Ask someone nearby</button>
+          </div>
+          <p class="feedback" id="fb-q2b"></p>
+        </div>
+
+        <div class="step" id="q2-step3">
+          <div class="divider"></div>
+          <p class="lead">Click when you are <b>100%</b> certain you’re awake.</p>
+          <div class="row">
+            <button class="btn choice" data-q="q2c" data-choice="sure">I’m sure.</button>
+          </div>
+          <p class="feedback" id="fb-q2c"></p>
+        </div>
+
+        <div class="row">
+          <button class="btn" data-go="#q3">Continue</button>
+          <button class="btn ghost" data-go="#q1">Back</button>
+        </div>
+
+        <p class="mono small dim">Demon note: any test happens inside experience.</p>
+      </div>
+    </section>
+
+    <!-- //module -->
+    <section class="page" id="q3">
+      <div class="card">
+        <h2>Module 3: Reason Check</h2>
+
+        <div class="step active" id="q3-step1">
+          <p class="lead">7 + 5 =</p>
+          <div class="row">
+            <button class="btn choice" data-q="q3a" data-choice="12">12</button>
+            <button class="btn choice" data-q="q3a" data-choice="13">13</button>
+            <button class="btn choice" data-q="q3a" data-choice="unsure">Unsure</button>
+          </div>
+          <p class="feedback" id="fb-q3a"></p>
+        </div>
+
+        <div class="step" id="q3-step2">
+          <div class="divider"></div>
+          <p class="lead">Logic check:</p>
+          <p class="mono small">
+            If it’s raining, the ground is wet.<br>
+            It’s raining.<br>
+            Therefore, the ground is wet.
+          </p>
+          <div class="row">
+            <button class="btn choice" data-q="q3b" data-choice="valid">Valid</button>
+            <button class="btn choice" data-q="q3b" data-choice="invalid">Invalid</button>
+          </div>
+          <p class="feedback" id="fb-q3b"></p>
+        </div>
+
+        <div class="step" id="q3-step3">
+          <div class="divider"></div>
+          <p class="lead">Definition check:</p>
+          <p class="mono small">Is a bachelor married?</p>
+          <div class="row">
+            <button class="btn choice" data-q="q3c" data-choice="yes">Yes</button>
+            <button class="btn choice" data-q="q3c" data-choice="no">No</button>
+          </div>
+          <p class="feedback" id="fb-q3c"></p>
+        </div>
+
+        <div class="row">
+          <button class="btn" data-go="#q4">Continue</button>
+          <button class="btn ghost" data-go="#q2">Back</button>
+        </div>
+
+        <p class="mono small dim">Demon note: if the rules/definitions can be altered, “obvious” truths don’t protect you.</p>
+      </div>
+    </section>
+
+    <!-- //module -->
+    <section class="page" id="q4">
+      <div class="card">
+        <h2>Module 4: Memory Check</h2>
+        <p class="lead">Earlier, in the “two blues” question, which did you select?</p>
+
+        <div class="row">
+          <button class="btn choice" data-q="q4" data-choice="A">A</button>
+          <button class="btn choice" data-q="q4" data-choice="B">B</button>
+          <button class="btn choice" data-q="q4" data-choice="not-sure">Not sure</button>
+        </div>
+
+        <p class="feedback" id="fb-q4"></p>
+
+        <div class="row">
+          <button class="btn" data-go="#end">View Results</button>
+          <button class="btn ghost" data-go="#q3">Back</button>
+        </div>
+
+        <p class="mono small dim">Demon note: if memory can be edited, “evidence” is just a story.</p>
+      </div>
+    </section>
+
+    <!-- //module -->
+    <section class="page" id="end">
+      <div class="card">
+        <h2>Result: Minimal Certainty</h2>
+
+        <div class="divider"></div>
+
+        <p class="lead">Final question:</p>
+        <p class="big">Are you doubting that you are doubting?</p>
+
+        <div class="row">
+          <button class="btn choice" data-q="final" data-choice="yes">Yes</button>
+          <button class="btn choice" data-q="final" data-choice="no">No</button>
+          <button class="btn choice" data-q="final" data-choice="unsure">Unsure</button>
+        </div>
+
+        <p class="feedback" id="fb-final"></p>
+
+        <div class="divider"></div>
+
+        <p class="mono small">
+          If a deceiver is tricking you, there must still be <em>someone</em> being tricked.
+          Even under total deception, the act of thinking/doubting remains.
+        </p>
+
+        <div class="row">
+          <button class="btn ghost" data-go="#intro" data-reset="1">Restart</button>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
